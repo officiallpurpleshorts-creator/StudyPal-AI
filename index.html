@@ -4,33 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>StudyPal AI</title>
-  
-  <!-- Favicon / Logo -->
   <link rel="icon" href="logo.png" type="image/png">
-
   <style>
     body, html {
       margin: 0;
       padding: 0;
       width: 100%;
       height: 100%;
-      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
+      flex-direction: column;
       background-color: #ffffff;
+    }
+    #logo {
+      width: 200px;
+      cursor: pointer;
+      transition: transform 0.2s;
+      margin-bottom: 20px;
+    }
+    #logo:hover {
+      transform: scale(1.1);
     }
     #app {
       width: 100%;
+      height: 80%;
+      display: none; /* hidden until logo clicked */
+    }
+    iframe {
+      width: 100%;
       height: 100%;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <!-- App container -->
-  <div id="app"></div>
+  <img src="logo.png" id="logo" alt="StudyPal AI Logo" onclick="showApp()">
 
-  <!-- Creao app script (replace YOUR_PROJECT_ID with your project’s ID) -->
-  <script src="https://cdn.creao.app/YOUR_PROJECT_ID/main.js"></script>
+  <div id="app">
+    <iframe id="creao-frame" src=""></iframe>
+  </div>
+
+  <script>
+    function showApp() {
+      document.getElementById("logo").style.display = "none"; // hide logo
+      document.getElementById("app").style.display = "block";  // show app
+      // Replace with your Creao project preview URL
+      document.getElementById("creao-frame").src = "https://creao.app/live/YOUR_PROJECT_ID";
+    }
+  </script>
 </body>
 </html>
