@@ -1,1 +1,6 @@
-StudyPal AI is the ultimate AI-powered study assistant designed to make learning faster, easier, and stress-free. Whether you’re doing homework, revising for exams, or trying to understand a difficult topic, StudyPal AI helps you master any subject in minutes.
+<p align="center">
+  <img src="assets/logo.png" width="160">
+</p>
+
+# StudyPal AI
+Your personal AI-powered study assistant that creates quizzes, summaries, and study plans from anything you upload.
